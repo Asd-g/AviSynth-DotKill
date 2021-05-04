@@ -91,7 +91,7 @@ May produce extreme artifacting if dupthresh is set too high.
     
 - show\
     Shows which blocks have been determined to contain no change between fields and therefore will be blended to reduce artifacts.\
-    White square means that it will blend with the next frame and black square the previous.
+    White square means that it will blend with the next frame and black square the previous.\
     Default: False.
     
 # Building
