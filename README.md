@@ -23,6 +23,8 @@ A purely spatial dotcrawl remover that can be safely used on most material after
     Must be greater than or equal to 1.
     Default: 1.
     
+---
+
 ```
 DotKillZ (clip input, int "order", int "offset")
 ```
@@ -47,6 +49,8 @@ Note that due to its nature only every other final frame will have dotcrawl and 
     Must be between 0 and 4.\
     Can only be determined by trial and error.\
     Default: 0.
+
+---
 
 ```
 DotKillT (clip input, int "order", int "offset", int "dupthresh", int "tratio", bool "show")
@@ -105,8 +109,8 @@ Use solution files.
 - CMake >= 3.16
 
 ```
-git clone https://github.com/Asd-g/AviSynth-bifrost && \
-cd AviSynth-bifrost && \
+git clone https://github.com/Asd-g/AviSynth-DotKill && \
+cd AviSynth-DotKill && \
 mkdir build && \
 cd build && \
 cmake .. && \
