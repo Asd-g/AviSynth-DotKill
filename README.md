@@ -1,10 +1,16 @@
-# Description
+## Description
 
 Spatio-temporal dotcrawl and rainbow remover for AviSynth/AviSynth+.
 
 This is [a port of the VapourSynth plugin DotKill](https://github.com/myrsloik/DotKill).
 
-# Usage
+### Requirements:
+
+- AviSynth 2.60 / AviSynth+ 3.4 or later
+
+- Microsoft VisualC++ Redistributable Package 2022 (can be downloaded from [here](https://github.com/abbodi1406/vcredist/releases))
+
+### Usage:
 
 ```
 DotKillS (clip input, int "iterations")
@@ -12,7 +18,7 @@ DotKillS (clip input, int "iterations")
 
 A purely spatial dotcrawl remover that can be safely used on most material after field matching.
 
-## Parameters:
+### Parameters:
 
 - input\
     A clip to process. It must be in YUV 8..16-bit planar format.
@@ -33,7 +39,7 @@ A pseudo-spatial dotcrawl and rainbow remover. It only works on NTSC content wit
 
 Note that due to its nature only every other final frame will have dotcrawl and rainbows removed. Typically never artifacts if all requirements are met.
 
-## Parameters:
+### Parameters:
 
 - input\
     A clip to process. It must be in YUV 8..16-bit planar format.
@@ -60,7 +66,7 @@ A full spatio-temporal dotcrawl and rainbow remover. It only works on NTSC conte
 
 May produce extreme artifacting if dupthresh is set too high.
 
-## Parameters:
+### Parameters:
 
 - input\
     A clip to process. It must be in YUV 8..16-bit planar format.
@@ -94,26 +100,24 @@ May produce extreme artifacting if dupthresh is set too high.
     White square means that it will blend with the next frame and black square the previous.\
     Default: False.
     
-# Building
+### Building:
 
-## Windows
+- Windows\
+    Use solution files.
 
-Use solution files.
-
-## Linux
-
-### Requirements
-
-- Git
-- C++17 compiler
-- CMake >= 3.16
-
-```
-git clone https://github.com/Asd-g/AviSynth-DotKill && \
-cd AviSynth-DotKill && \
-mkdir build && \
-cd build && \
-cmake .. && \
-make -j$(nproc) && \
-sudo make install
-```
+- Linux
+    ```
+    Requirements:
+        - Git
+        - C++17 compiler
+        - CMake >= 3.16
+    ```
+    ```
+    git clone https://github.com/Asd-g/AviSynth-DotKill && \
+    cd AviSynth-DotKill && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make -j$(nproc) && \
+    sudo make install
+    ```
